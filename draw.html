@@ -2,14 +2,17 @@
 <html>
 <body>
 
-<canvas id="myCanvas" onmouseover = "cross(event)" width="600" height="600"
-style="border:1px solid #c3c3c3;">
+<canvas id="myCanvas" onmouseover = "cross(event);" width="600" height="600" style="border:1px solid #c3c3c3;">
 Your browser does not support the canvas element.
 </canvas>
-
+<p id = "low"></p>
 <script>
+var x,y;
 function cross(event){
 	document.getElementById("myCanvas").style.cursor = "crosshair";
+	x = event.clientX;
+	y = event.clientY;
+	document.getElementById("low").innerHTML = "x:" + x + " y:"+ y;
 }
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
