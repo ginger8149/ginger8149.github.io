@@ -5,10 +5,13 @@
 <canvas id="myCanvas" onmousemove = "cross(event);" onclick = "start()"width="600" height="600" style="border:1px solid #c3c3c3;">
 Your browser does not support the canvas element.
 </canvas>
+<button onclick = "clearcanvas();">clear the screen</button>
 <p id = "low"></p>
 <p id = "s">
 <script>
 var x,y,a,b;
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
 function cross(event){
 	document.getElementById("myCanvas").style.cursor = "crosshair";
 	x = event.clientX;
@@ -16,13 +19,30 @@ function cross(event){
 	document.getElementById("low").innerHTML = "x:" + x + " y:"+ y;
 }
 function start(){
+	if (a != null){
+	ctx.moveTo(a,b);
+	
 	a = x;
 	b = y;
 	document.getElementById("s").innerHTML = "a:" + a + " b:"+ b;
 	
+	ctx.lineTo(x,y);
+	ctx.stroke();
+	}
+	else{
+	a=x;
+	b=y;
+	}
 }
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+function clearcanvas(){
+	x= 0;
+	y= 0;
+	a= null;
+	b= null;
+	ctx.clearRect(0,0,600,600);
+	ctx.fillRect(0,0,600,600);
+	ctx.beginPath();
+}
 ctx.fillStyle = "#FF0000";
 ctx.fillRect(0,0,600,600);
 
