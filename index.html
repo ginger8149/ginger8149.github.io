@@ -5,11 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
+body {
+  position: relative;
+}
 .parallax {
  
 
   /* Set a specific height */
-  min-height: 500px; 
+  min-height:500px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -23,21 +26,21 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="0">
   
 <!--nav bar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id = "navbar1">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
       </li>
-  <!--<li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+      <li class="nav-item">
+        <a class="nav-link" href="#feachers">Features</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
@@ -50,28 +53,30 @@
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <a class="dropdown-item" href="#">Something else here</a>
-        </div> -->
+        </div>
       </li>
     </ul>
   </div>
 </nav>
 
-<div class="parallax" style = "background-image: url('img/index_bg_1.jpg');">
+<div class="parallax" style = "background-image: url('img/index_bg_1.jpg');" id ="home">
   <h1 style="
   line-height: 400px;
   height: 400px;
   text-align: center;
+  color:#88fcfc;
   ">
     welcome
   </h1>  
 </div>
 
 <br><br><br><br><br><br><br><br><br><br>
-<div class="parallax" style = "background-image: url('img/index_bg_2.jpg');">
+<div class="parallax" style = "background-image: url('img/index_bg_2.jpg');" id = "feachers">
   <h1 style="
   line-height: 400px;
   height: 400px;
   text-align: center;
+  color:#88fcfc;
   ">
     this site is curently under development
   </h1>
