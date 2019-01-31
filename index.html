@@ -5,11 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
+body {
+  position: relative;
+}
 .parallax {
  
 
   /* Set a specific height */
-  min-height: 500px; 
+  min-height:500px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -23,24 +26,24 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="0">
   
 <!--nav bar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id = "navbar1">
+  <a class="navbar-brand" href="#home">ginger8149</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-  <!--<li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+      <li class="nav-item">
+        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#aboutme">about me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">partners</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,33 +53,48 @@
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <a class="dropdown-item" href="#">Something else here</a>
-        </div> -->
+        </div>
       </li>
     </ul>
   </div>
 </nav>
 
-<div class="parallax" style = "background-image: url('img/index_bg_1.jpg');">
+<div class="parallax" style = "background-image: url('img/index_bg_1.jpg');" id ="home">
   <h1 style="
   line-height: 400px;
   height: 400px;
   text-align: center;
+  color:#88fcfc;
   ">
-    welcome
+    welcome 
   </h1>  
 </div>
+<br>
+<p style="
+  font-size: 150%;
+  text-align: center;
+  color:#4286f4;
+  ">
+wecome to ginger8149 web development<br>
+i build inpresive sites for lots of groops and componys<br>
+i also run a you tube chanile![add link]
+</p>
+<br>
 
-<br><br><br><br><br><br><br><br><br><br>
-<div class="parallax" style = "background-image: url('img/index_bg_2.jpg');">
+
+<div class="parallax" style = "background-image: url('img/index_bg_2.jpg');" id = "aboutme">
   <h1 style="
   line-height: 400px;
   height: 400px;
   text-align: center;
+  color:#88fcfc;
   ">
     this site is curently under development
   </h1>
 </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
